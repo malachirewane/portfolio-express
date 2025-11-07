@@ -2,37 +2,13 @@
 
 ## 🔗 Live Website  
 **Render Link:** [https://portfolio-express-4jly.onrender.com/](https://portfolio-express-4jly.onrender.com/)  
-
+---
 ---
 
 ## 📘 Overview  
 This is a **Node.js + Express.js** portfolio website that presents my background, projects, and contact information.  
 Originally a static HTML/CSS project, it was refactored to use **Express routing** and **EJS templating** for modular design and deployment on **Render**.  
-
 ---
-
-## 🧠 Learning Goals  
-This project demonstrates:  
-- Setting up an Express.js web server  
-- Creating routes for multiple pages  
-- Using **EJS templates** for rendering views  
-- Managing static files (CSS, images, videos)  
-- Designing a responsive layout with multiple stylesheets  
-- Deploying a Node.js app using Render  
-
----
-
-## 🗂 Folder Structure  
-
-portfolio-express/
-├── app.js # Main Express app setup
-├── /routes # Route files (index.js, users.js)
-├── /views # EJS pages (index, about, projects, contact)
-├── /public # Static assets (CSS, images, videos)
-│ └── /css # style.css, mobile.css, tablet.css, laptop.css
-└── /bin/www # Server startup script for Render
-
-
 ---
 
 ## 🖥️ Pages  
