@@ -1,0 +1,105 @@
+/* ---------------------------
+   Reset & Base Styles
+   --------------------------- */
+
+/* Remove default browser margin/padding so elements span full width.
+   Set the global font for consistency across all pages. */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
+
+/* ---------------------------
+   Header Section
+   --------------------------- */
+
+/* Header spans full width with a gradient background.
+   Text centered with padding for spacing. */
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #4A00E0, #8E2DE2, #E100FF); /* purple → magenta → pink */
+  color: white;
+  width: 100%;              /* ensure full width */
+  box-sizing: border-box;   /* includes padding in width calculation */
+}
+
+/* ---------------------------
+   Navigation Menu
+   --------------------------- */
+
+/* Flexbox used to center navigation horizontally. */
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation list items displayed in a row with gaps between them. */
+header nav ul {
+  list-style: none;    /* remove default list bullets */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;           /* spacing between nav items */
+  width: 100%;
+  max-width: 900px;    /* keeps nav from stretching too wide */
+}
+
+/* Navigation links styled with padding, bold text, and smooth hover effect. */
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  display: inline-block;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect: gold color + glowing text shadow. */
+header nav ul li a:hover {
+  color: #FFD700; 
+  text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8);
+}
+
+/* ---------------------------
+   Intro Section (Home Page)
+   --------------------------- */
+
+/* Centers the intro block on the page with limited width for readability. */
+.intro {
+  text-align: center;     /* centers heading + paragraph */
+  max-width: 700px;       /* prevents text from stretching too wide */
+  margin: 60px auto;      /* centers horizontally and adds top/bottom spacing */
+  padding: 20px;
+}
+
+/* Styles the greeting heading to be larger and more prominent. */
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Paragraph styling for slightly larger, softer text. */
+.intro p {
+  font-size: 1.2rem;
+  color: #444;            /* dark grey instead of black for smoother look */
+}
+
+/* ---------------------------
+   Footer Section
+   --------------------------- */
+
+/* Footer styled similar to header with a different gradient.
+   Full-width with centered text. */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #00F5A0, #00D9F5, #007CF0); /* aqua → teal → blue */
+  color: white;
+  font-size: 14px;
+  width: 100%;             /* ensure footer spans full width */
+  box-sizing: border-box;
+}
