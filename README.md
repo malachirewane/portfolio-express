@@ -1,57 +1,45 @@
-# 🌐 Malachi Rewane — ExpressJS Portfolio  
+# Malachi Rewane - Portfolio
 
-## 🔗 Live Website  
-**Render Link:** [https://portfolio-express-4jly.onrender.com/](https://portfolio-express-4jly.onrender.com/)  
----
----
-
-## 📘 Overview  
-This is a **Node.js + Express.js** portfolio website that presents my background, projects, and contact information.  
-Originally a static HTML/CSS project, it was refactored to use **Express routing** and **EJS templating** for modular design and deployment on **Render**.  
----
----
-
-## 🖥️ Pages  
-
-### 🏠 Home  
-Intro message with navigation to all pages.  
-
-### 👤 About Me  
-Information about me, my interests, and a short intro video.  
-
-### 💻 Projects  
-Grid of project cards including:  
-- Face Detection with OpenCV  
-- Website Security Review  
-- Game Development Prototype  
-- Personal Portfolio  
-
-### 📬 Contact Me  
-Simple contact form (front-end only) collecting name, email, phone, and message.  
+A responsive personal portfolio website built with **Express.js**, **EJS**, and **Bootstrap**.  
+This project showcases my skills, projects, and contact information in a clean, modern design.
 
 ---
 
-## ⚙️ Technologies  
-| Tool | Purpose |
-|------|----------|
-| **Node.js** | Runtime environment |
-| **Express.js** | Web framework & routing |
-| **EJS** | Template rendering |
-| **HTML5 / CSS3** | Structure and styling |
-| **Render** | Hosting and deployment |
+## Features
+- Responsive design using **Bootstrap 5**
+- EJS templating with **partials** (header & footer)
+- Four main pages: **Home**, **About**, **Projects**, **Contact**
+- **Font Awesome** icon integration
+- Smooth scrolling and hover animations
+- Mobile-first responsive design
 
 ---
 
-## 🚀 Setup  
+## Tech Stack
+- **Backend**: Node.js, Express.js  
+- **Templating**: EJS  
+- **Frontend**: Bootstrap 5, Font Awesome, Custom CSS/JS  
+- **Deployment**: Render / Heroku / AWS  
 
+---
+
+## External Code References
+- [**Bootstrap 5**](https://getbootstrap.com/)  
+- [**Font Awesome**](https://fontawesome.com/)  
+- [**Express Generator**](https://expressjs.com/en/starter/generator.html)
+
+---
+
+## Quick Start
 ```bash
-# Clone the repository
-git clone https://github.com/malachirewane/portfolio-express.git
+# Clone this repository
+git clone https://github.com/MalachiSec/portfolio-express.git
+
+# Navigate to project folder
 cd portfolio-express
 
 # Install dependencies
 npm install
 
-# Run locally
+# Start the development server
 npm start
-# Visit http://localhost:3000
