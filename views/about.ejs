@@ -1,60 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Basic meta setup for encoding and responsive display -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('partials/header') %>
 
-  <!-- Page title -->
-  <title>About Me - Malachi Rewane</title>
+    <!-- About page with my background and interests -->
+    <section class="py-5" style="padding-top: 100px !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 text-center mb-5">About Me</h1>
+                    
+                    <!-- My introduction with profile picture -->
+                    <div class="row align-items-center mb-5">
+                        <div class="col-md-4 text-center mb-4">
+                            <img src="/images/malachi.webp" alt="Photo of Malachi Rewane" class="img-fluid rounded-circle shadow">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Who I Am</h3>
+                            <p class="lead">Hello! I'm Malachi Rewane, a Networking and Information Technology Security student passionate about technology, programming, and creative projects.</p>
+                            <p>I enjoy exploring cybersecurity, developing websites, and learning how systems connect and function together.</p>
+                            <p>Outside of class, I enjoy Capture the Flag challenges, modding cars, and developing small games.</p>
+                        </div>
+                    </div>
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+                    <!-- Education information -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-graduation-cap me-2"></i>Education</h4>
+                            <ul class="list-unstyled">
+                                <li><strong>Networking & IT Security</strong> - Current Student</li>
+                                <li>Focus on cybersecurity, network infrastructure, and system administration</li>
+                            </ul>
+                        </div>
+                    </div>
 
-<body>
-  <!-- Header with site title and navigation links -->
-  <header>
-    <h1>About Me</h1>
-    <nav>
-      <ul>
-        <!-- Site navigation for all pages -->
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact Me</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main page content -->
-  <main>
-    <!-- About section with bio and image -->
-    <section>
-      <h2>Who I Am</h2>
-      <!-- Personal image -->
-      <img src="/images/malachi.webp" alt="Photo of Malachi Rewane" width="250">
-      <p>Hello! I’m Malachi Rewane, a Networking and Information Technology Security student passionate about technology, programming, and creative projects.</p>
-      <p>I enjoy exploring cybersecurity, developing websites, and learning how systems connect and function together.</p>
-      <p>Outside of class, I enjoy Capture the Flag challenges, modding cars, and developing small games.</p>
+                    <!-- Introduction video section -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-video me-2"></i>My Introduction</h4>
+                            <div class="ratio ratio-16x9">
+                                <video controls poster="/images/poster.jpg">
+                                    <source src="/videos/WIN_20251002_21_41_25_Pro.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Section with introduction video -->
-    <section>
-      <h2>My Intro Video</h2>
-      <video width="400" controls poster="/images/poster.jpg">
-        <source src="/videos/WIN_20251002_21_41_25_Pro.mp4" type="video/mp4">
-        <!-- Fallback text for browsers that don't support video -->
-        Your browser does not support the video tag.
-      </video>
-    </section>
-  </main>
-
-  <!-- Footer with contact info -->
-  <footer>
-    <p>© 2025 Malachi Rewane | Contact: 
-      <a href="mailto:mr.rewane@gmail.com">mr.rewane@gmail.com</a>
-    </p>
-  </footer>
-</body>
-</html>
+<%- include('partials/footer') %>

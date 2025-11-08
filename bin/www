@@ -1,32 +1,33 @@
 #!/usr/bin/env node
 
 /**
- * Module dependencies.
+ * This file starts the Express server
+ * It's the entry point that makes the website run
  */
 var app = require('../app');
 var debug = require('debug')('portfolio-express:server');
 var http = require('http');
 
 /**
- * Get port from environment and store in Express.
+ * Set the port number from environment or use 3000 as default
  */
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Create the HTTP server using our Express app
  */
 var server = http.createServer(app);
 
 /**
- * Listen on provided port, on all network interfaces.
+ * Start the server and listen for requests
  */
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
 /**
- * Normalize a port into a number, string, or false.
+ * Make sure the port number is valid
  */
 function normalizePort(val) {
   var port = parseInt(val, 10);
@@ -36,7 +37,7 @@ function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * Handle server errors gracefully
  */
 function onError(error) {
   if (error.syscall !== 'listen') throw error;
@@ -58,7 +59,7 @@ function onError(error) {
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * Show message when server starts successfully
  */
 function onListening() {
   var addr = server.address();

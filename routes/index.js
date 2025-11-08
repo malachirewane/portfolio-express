@@ -1,32 +1,40 @@
-// Import Express and create a router instance
+// Set up Express router for handling page routes
 var express = require('express');
 var router = express.Router();
 
-// --- Route Definitions ---
+// --- Define all the page routes ---
 
-// Home page route
-// Renders the index.ejs file and passes a title variable
+// Home page route - shows the main portfolio page
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { 
+    title: 'Home',
+    activePage: 'home'
+  });
 });
 
-// About page route
-// Sends the About Me page when /about is visited
+// About page route - shows my personal information
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About Me' });
+  res.render('about', { 
+    title: 'About Me',
+    activePage: 'about'
+  });
 });
 
-// Projects page route
-// Displays the projects.ejs template
+// Projects page route - displays my work portfolio
 router.get('/projects', function(req, res, next) {
-  res.render('projects', { title: 'Projects' });
+  res.render('projects', { 
+    title: 'Projects',
+    activePage: 'projects'
+  });
 });
 
-// Contact page route
-// Renders the contact.ejs template for /contact
+// Contact page route - shows contact form and info
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact Me' });
+  res.render('contact', { 
+    title: 'Contact Me',
+    activePage: 'contact'
+  });
 });
 
-// Export router so it can be used in app.js
+// Export the router to use in the main app
 module.exports = router;

@@ -1,62 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Basic meta setup for encoding and responsiveness -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('partials/header') %>
 
-  <!-- Page title -->
-  <title>Contact - Malachi Rewane</title>
+    <!-- Contact page where people can reach out to me -->
+    <section class="py-5" style="padding-top: 100px !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 text-center mb-5">Contact Me</h1>
+                    
+                    <!-- My contact information cards -->
+                    <div class="row mb-5">
+                        <div class="col-md-6 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                                    <h5>Email</h5>
+                                    <p class="mb-0">mr.rewane@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                                    <h5>Phone</h5>
+                                    <p class="mb-0">Available upon request</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact form for sending messages -->
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-4">Send Me a Message</h4>
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Name *</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comments" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="comments" name="comments" rows="5" required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-
-<body>
-  <!-- Header with title and navigation links -->
-  <header>
-    <h1>Contact Me</h1>
-    <nav>
-      <ul>
-        <!-- Navigation menu linking to other pages -->
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact Me</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main content: contact form -->
-  <main>
-    <!-- Basic contact form with name, email, phone, and comments fields -->
-    <form action="#" method="post">
-      <!-- Name input -->
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
-
-      <!-- Email input -->
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
-
-      <!-- Phone number input with validation pattern -->
-      <label for="phone">Cell No.:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
-
-      <!-- Comments text area -->
-      <label for="comments">Comments:</label><br>
-      <textarea id="comments" name="comments" rows="4" cols="40" required></textarea><br><br>
-
-      <!-- Submit button -->
-      <button type="submit">Submit</button>
-    </form>
-  </main>
-
-  <!-- Footer section with email contact -->
-  <footer>
-    <p>© 2025 Malachi Rewane | Contact: 
-      <a href="mailto:mr.rewane@gmail.com">mr.rewane@gmail.com</a>
-    </p>
-  </footer>
-</body>
-</html>
+<%- include('partials/footer') %>

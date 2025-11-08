@@ -1,57 +1,56 @@
-// Import required modules for Express and middleware setup
+// Import the modules needed for Express
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-// Import route files
+// Import my route files - only index router needed
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
-// Create the Express app
+// Create the main Express application
 var app = express();
 
-// --- View Engine Setup ---
-// Set EJS as the templating engine and specify the 'views' directory
+// --- Setup the view engine ---
+// Tell Express to use EJS for templates and where to find them
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// --- Middleware Setup ---
-// Logs all requests in the console (for development)
+// --- Setup middleware ---
+// Log requests to the console for debugging
 app.use(logger('dev'));
 
-// Parse incoming JSON and URL-encoded form data
+// Parse JSON and form data from requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Enables reading and setting cookies
+// Enable cookie handling
 app.use(cookieParser());
 
-// Serve static files like CSS, images, and JS from the "public" folder
+// Serve static files from the public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// --- Route Setup ---
-// Main routes for the site
+// --- Setup routes ---
+// Connect URLs to their route handlers
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Removed users router since we don't need user functionality
 
-// --- Error Handling ---
-// Catch 404 errors and forward to error handler
+// --- Error handling ---
+// Handle 404 errors - page not found
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// Custom error handler for other server issues
+// Handle all other errors
 app.use(function(err, req, res, next) {
-  // Show detailed errors only in development mode
+  // Only show full error details in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // Render the default error page
+  // Show the error page
   res.status(err.status || 500);
   res.render('error');
 });
 
-// Export app so it can be used by the server
+// Export the app for the server to use
 module.exports = app;
